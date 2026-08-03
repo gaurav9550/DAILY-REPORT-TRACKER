@@ -1,0 +1,2032 @@
+/* ---------- Global ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+
+body{
+
+    background:#f4f7fb;
+    color:#1f2937;
+
+}
+
+
+
+/* ---------- App Layout ---------- */
+
+.app{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+
+
+/* ---------- Sidebar ---------- */
+
+
+.sidebar{
+
+    width:260px;
+
+    background:#111827;
+
+    color:white;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+.menu{
+
+    list-style:none;
+
+    flex:1;
+
+}
+
+
+
+.menu li{
+
+    padding:14px 15px;
+
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#d1d5db;
+
+    transition:0.3s;
+
+}
+
+
+
+.menu li:hover{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+
+
+.menu .active{
+
+    background:#6366f1;
+
+    color:white;
+
+}
+
+
+
+
+
+.logout{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#1f2937;
+
+    text-align:center;
+
+}
+
+
+
+.logout:hover{
+
+    background:#374151;
+
+}
+
+
+
+
+
+
+/* ---------- Main Area ---------- */
+
+
+.main{
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+
+
+
+
+/* ---------- Navbar ---------- */
+
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.search{
+
+    background:white;
+
+    width:350px;
+
+    padding:14px 20px;
+
+    border-radius:15px;
+
+    color:#9ca3af;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+
+
+.user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    font-size:20px;
+
+}
+
+
+
+.profile{
+
+    background:white;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    display:flex;
+
+    gap:50px;
+
+    align-items:end;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+
+
+
+
+
+/* ---------- Hero Section ---------- */
+
+
+.hero{
+
+
+    background:linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    box-shadow:
+    0 20px 40px rgba(99,102,241,0.25);
+
+}
+
+
+
+.hero h1{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.hero p{
+
+    font-size:16px;
+
+    opacity:0.9;
+
+}
+
+
+
+.hero button{
+
+
+    border:none;
+
+    background:white;
+
+    color:#6366f1;
+
+    padding:14px 25px;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+.hero button:hover{
+
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+/* ---------- Responsive ---------- */
+
+
+@media(max-width:900px){
+
+
+    .sidebar{
+
+        width:80px;
+
+    }
+
+
+    .logo{
+
+        font-size:18px;
+
+    }
+
+
+    .menu li{
+
+        font-size:0;
+
+    }
+
+
+    .logout{
+
+        font-size:0;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .search{
+
+        width:100%;
+
+    }
+
+
+    .hero{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        text-align:center;
+
+    }
+
+
+}
+/* ---------- Statistics Cards ---------- */
+
+
+.stats{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+.stat-card{
+
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+.stat-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+.icon{
+
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:15px;
+
+    background:#eef2ff;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+.stat-card h3{
+
+
+    color:#6b7280;
+
+    font-size:14px;
+
+
+}
+
+
+
+.stat-card h1{
+
+
+    margin:8px 0;
+
+    font-size:28px;
+
+
+}
+
+
+
+.stat-card p{
+
+
+    color:#9ca3af;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:1100px){
+
+
+    .stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+/* ---------- Tasks Section ---------- */
+
+
+.dashboard-grid{
+
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+
+.task-box,
+.progress-box{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+
+
+.section-header{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.task-input{
+
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.task-input input{
+
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+
+}
+
+
+
+
+.task-input button{
+
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:0 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+.task-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:#f8fafc;
+
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+.task-item span{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+.task-item.completed span{
+
+
+    text-decoration:line-through;
+
+    color:#9ca3af;
+
+
+}
+
+
+
+
+
+.delete-btn{
+
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+/* Progress */
+
+
+.progress-bar{
+
+
+    height:15px;
+
+    background:#e5e7eb;
+
+    border-radius:20px;
+
+    margin:30px 0;
+
+
+}
+
+
+
+
+.progress{
+
+
+    height:100%;
+
+    width:75%;
+
+    background:#6366f1;
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+/* ---------- Planner Section ---------- */
+
+
+.planner-grid{
+
+
+    display:grid;
+
+    grid-template-columns:1fr 2fr;
+
+    gap:25px;
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+.calendar-box,
+.planner-box{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+
+.calendar-box input{
+
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+
+}
+
+
+
+
+.selected-date{
+
+
+    margin-top:35px;
+
+    padding:15px;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+
+}
+
+/* ---------- Notes Section ---------- */
+
+
+.notes-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.notes-box,
+.notes-list{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+
+
+.note-input{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+
+
+.note-input input,
+.note-input textarea{
+
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+}
+
+
+
+.note-input textarea{
+
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+
+.note-input button{
+
+
+    width:150px;
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.notes-list{
+
+
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.note-card{
+
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    position:relative;
+
+}
+
+
+
+.note-card h3{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.note-card p{
+
+    color:#6b7280;
+
+}
+
+
+
+
+
+.delete-note{
+
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+
+    border:none;
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:6px 10px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+    .notes-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+
+
+
+.planner-input{
+
+
+    display:flex;
+
+    gap:10px;
+
+    margin:20px 0;
+
+
+}
+
+
+
+
+.planner-input input{
+
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+
+}
+
+
+
+
+.planner-input button{
+
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:0 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.plan-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    padding:15px;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+.delete-plan{
+
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:7px 12px;
+
+    border-radius:8px;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .planner-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ---------- Pomodoro ---------- */
+
+
+.pomodoro-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.pomodoro-box{
+
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+.timer{
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+.timer h1{
+
+
+    font-size:70px;
+
+    color:#6366f1;
+
+
+}
+
+
+
+
+.timer-buttons{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.timer-buttons button{
+
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6366f1;
+
+    color:white;
+
+    cursor:pointer;
+
+
+}
+
+
+
+.timer-buttons button:hover{
+
+
+    transform:translateY(-3px);
+
+
+}
+
+/* ---------- Habit Tracker ---------- */
+
+
+.habit-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.habit-box{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+
+
+.habit-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin:20px 0;
+
+}
+
+
+
+
+.habit-input input{
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+.habit-input button{
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:0 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.habit-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:#f8fafc;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+.habit-info h3{
+
+    margin-bottom:5px;
+
+}
+
+
+
+.streak{
+
+
+    color:#f97316;
+
+    font-weight:bold;
+
+}
+
+
+
+.habit-actions button{
+
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+.complete-habit{
+
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+
+
+.delete-habit{
+
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+/* ---------- Goal Tracker ---------- */
+
+
+.goal-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.goal-box{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+.goal-input{
+
+
+    display:flex;
+
+    gap:10px;
+
+    margin:20px 0;
+
+
+}
+
+
+
+
+.goal-input input{
+
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+
+}
+
+
+
+.goal-input button{
+
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:0 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.goal-card{
+
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.goal-header{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.goal-progress{
+
+
+    height:12px;
+
+    background:#e5e7eb;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.goal-progress-bar{
+
+
+    height:100%;
+
+    background:#6366f1;
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+.goal-buttons{
+
+
+    margin-top:15px;
+
+}
+
+
+
+.goal-buttons button{
+
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+
+}
+
+
+
+.increase{
+
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+
+
+.delete-goal{
+
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+
+/* ---------- Analytics ---------- */
+
+
+.analytics-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.analytics-box{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+
+
+.charts{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+
+
+
+.chart-card{
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+.chart-card h3{
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+    .charts{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+/* ---------- Profile ---------- */
+
+
+.profile-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.profile-box{
+
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+}
+
+
+
+.profile-image{
+
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#6366f1;
+
+    color:white;
+
+    font-size:45px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    margin:auto;
+
+
+}
+
+
+
+.profile-info{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin:30px 0;
+
+
+}
+
+
+
+.profile-info div{
+
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:15px;
+
+
+}
+
+
+
+.profile-box button{
+
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Theme Button */
+
+
+#themeToggle{
+
+
+    border:none;
+
+    background:#f3f4f6;
+
+    padding:10px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+
+}
+
+
+/* Edit Profile */
+
+.edit-form{
+
+    display:none;
+
+    margin-top:25px;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.edit-form input{
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+.edit-form button{
+
+    background:#22c55e;
+
+}
+
+
+/* ---------- Weather ---------- */
+
+
+.weather-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.weather-box{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+
+.weather-content{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin:25px 0;
+
+
+}
+
+
+
+.weather-icon{
+
+
+    font-size:70px;
+
+
+}
+
+
+
+.weather-info h1{
+
+
+    font-size:45px;
+
+    color:#6366f1;
+
+
+}
+
+
+
+
+.weather-box input{
+
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+.weather-box button{
+
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#6366f1;
+
+    color:white;
+
+    cursor:pointer;
+
+
+}
+
+
+/* ---------- Quotes ---------- */
+
+
+.quote-section{
+
+    margin-top:30px;
+
+}
+
+
+
+.quote-box{
+
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+.quote-content{
+
+
+    margin:30px 0;
+
+
+}
+
+
+
+.quote-content p{
+
+
+    font-size:22px;
+
+    font-style:italic;
+
+    line-height:1.6;
+
+
+}
+
+
+
+.quote-content h4{
+
+
+    color:#6366f1;
+
+
+}
+
+
+
+.quote-box button{
+
+
+    background:#6366f1;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+
+}

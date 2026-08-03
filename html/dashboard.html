@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusFlow | Dashboard</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            🚀 FocusFlow
+
+        </div>
+
+        <ul class="menu">
+
+            <li class="active" data-section="dashboard">🏠 Dashboard</li>
+
+            <li data-section="planner">📅 Planner</li>
+
+            <li data-section="tasks">✅ Tasks</li>
+
+            <li data-section="notes">📝 Notes</li>
+
+            <li data-section="pomodoro">⏱ Pomodoro</li>
+
+            <li data-section="habits">🔥 Habits</li>
+
+            <li data-section="goals">🎯 Goals</li>
+
+            <li data-section="analytics">📊 Analytics</li>
+
+            <li data-section="profile">👤 Profile</li>
+
+        </ul>
+
+        <div class="logout">🚪 Logout</div>
+
+    </aside>
+
+
+
+
+
+
+
+    <!-- Main Content -->
+
+
+    <main class="main">
+
+
+        <!-- Navbar -->
+
+
+        <header class="navbar">
+
+           <div class="user">
+
+
+            <div class="profile">
+
+                <span>Gaurav</span>
+
+                👤
+
+            </div>
+
+        </div>
+
+
+        </header>
+
+
+
+
+
+
+        <!-- Hero Section -->
+
+
+        <section class="hero" id="dashboard">
+
+
+            <div>
+
+
+                <h1>
+                    Good Evening, Gaurav 👋
+                </h1>
+
+
+                <p>
+                    Stay focused. Small progress every day creates big results.
+                </p>
+
+
+            </div>
+
+
+
+            <button>+ New Task</button>
+
+
+
+        </section>
+        <!-- Statistics Cards -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="icon">✅</div>
+
+                <div>
+
+                    <h3>Tasks Completed</h3>
+
+                    <h1>8/10</h1>
+
+                    <p>Today's Progress</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon">⏱</div>
+
+                <div>
+
+                    <h3>Focus Time</h3>
+
+                    <h1>2h 30m</h1>
+
+                    <p>Productive Hours</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon">🔥</div>
+
+                <div>
+
+                    <h3>Habit Streak</h3>
+
+                    <h1>15 Days</h1>
+
+                    <p>Consistency</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">🎯</div>
+
+                <div>
+
+                    <h3>Goals</h3>
+
+                    <h1>80%</h1>
+
+                    <p>Completed</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Tasks Section -->
+
+        <section class="dashboard-grid" id="tasks">
+
+        <!-- Today's Tasks -->
+
+            <div class="task-box">
+
+                <div class="section-header">
+
+                    <h2>Today's Tasks ✅</h2>
+
+                </div>
+
+                <div class="task-input">
+
+                    <input type="text"  id="taskInput" placeholder="Add a new task...">
+
+                    <button id="addTask">Add</button>
+
+                </div>
+
+                <div id="taskList">
+           
+                    <!-- Tasks will appear here -->
+
+                </div>
+
+            </div>
+
+            <!-- Progress Box -->
+
+            <div class="progress-box">
+
+                <h2>Daily Progress 📊</h2>
+
+                <div class="progress-bar">
+
+                    <div class="progress"></div>
+
+                </div>
+
+                <h3>75% Completed</h3>
+
+            </div>
+
+        </section>
+
+        <!-- Calendar + Planner Section -->
+
+        <section class="planner-grid" id="planner">
+
+            <!-- Calendar -->
+
+            <div class="calendar-box">
+
+                <h2>Calendar 📅</h2>
+
+                <input type="date" id="plannerDate">
+
+                <div class="selected-date">
+
+                    Selected Date:
+
+                    <span id="dateDisplay">None</span>
+
+                </div>
+
+            </div>
+
+            <!-- Planner -->
+
+            <div class="planner-box">
+
+                <h2>Daily Planner 📝</h2>
+
+                <div class="planner-input">
+
+                    <input type="text" id="planInput" placeholder="Add your plan...">
+ 
+                    <button id="addPlan">Add</button>
+
+                </div>
+
+                <div id="planList"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Notes Section -->
+
+        <section class="notes-section" id="notes">
+
+            <div class="notes-box">
+
+                <h2>Quick Notes 📝</h2>
+
+                <div class="note-input">
+
+                    <input type="text" id="noteTitle" placeholder="Note title...">
+
+                    <textarea id="noteText" placeholder="Write your note..."></textarea>
+
+                    <button id="addNote">Add Note</button>
+
+                </div>
+
+            </div>
+
+            <div class="notes-list" id="notesList">
+
+                <!-- Notes will appear here -->
+
+            </div>
+
+        </section>
+
+        <!-- Pomodoro Timer Section -->
+
+        <section class="pomodoro-section" id="pomodoro">
+
+            <div class="pomodoro-box">
+
+                <h2>Focus Timer ⏱</h2>
+
+                <div class="timer">
+
+                    <h1 id="timer">50:00</h1>
+
+                </div>
+
+                <div class="timer-buttons">
+
+                    <button id="startTimer">Start</button>
+
+                    <button id="pauseTimer">Pause</button>
+
+                    <button id="resetTimer">Reset</button>
+
+                </div>
+
+                <p>
+
+                    Completed Sessions:
+
+                    <span id="sessions">0</span>
+                </p>
+
+            </div>
+
+        </section>
+        <!-- Habit Tracker Section -->
+
+        <section class="habit-section" id="habits">
+
+            <div class="habit-box">
+
+                <h2>Habit Tracker 🔥</h2>
+
+                <div class="habit-input">
+
+                    <input type="text" id="habitInput" placeholder="Add new habit...">
+
+                    <button id="addHabit">Add</button>
+
+                </div>
+
+                <div id="habitList"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Goal Tracker Section -->
+
+        <section class="goal-section" id="goals">
+
+            <div class="goal-box">
+
+                <h2>Goal Tracker 🎯</h2>
+
+                <div class="goal-input">
+
+                    <input type="text" id="goalInput" placeholder="Enter your goal...">
+
+                    <button id="addGoal">Add</button>
+
+                </div>
+
+                <div id="goalList"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Analytics Section -->
+
+        <section class="analytics-section" id="analytics">
+
+            <div class="analytics-box">
+
+                <h2>Productivity Analytics 📊</h2>
+
+                <div class="charts">
+
+                    <div class="chart-card">
+
+                        <h3>Tasks</h3>
+
+                        <canvas id="taskChart"></canvas>
+
+                    </div>
+
+                    <div class="chart-card">
+
+                        <h3>Focus Sessions</h3>
+
+                        <canvas id="focusChart"></canvas>
+
+                    </div>
+
+                    <div class="chart-card">
+
+                        <h3>Habits</h3>
+
+                        <canvas id="habitChart"></canvas>
+
+                    </div>
+
+                    <div class="chart-card">
+
+                        <h3>Goals</h3>
+
+                        <canvas id="goalChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section" id="profile">
+
+            <div class="profile-box">
+
+                <div class="profile-image">👤</div>
+
+                <h2 id="profileName">Gaurav Kumar</h2>
+
+                <p id="profileRole">Computer Science Student</p>
+
+                <div class="profile-info">
+
+                    <div>
+
+                        <h3>Tasks</h3>
+
+                        <p>50+</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Focus Hours</h3>
+
+                        <p>20h</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Streak</h3>
+
+                        <p>15 Days 🔥</p>
+
+                    </div>
+
+                </div>
+
+                <button id="editProfile">Edit Profile</button>
+
+
+                <!-- Edit Form -->
+
+                <div id="editForm" class="edit-form">
+
+                    <input  type="text" id="nameInput" placeholder="Enter name">
+
+                    <input  type="text" id="roleInput" placeholder="Enter role">
+
+                    <button id="saveProfile">Save</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Weather Section -->
+
+        <section class="weather-section">
+
+            <div class="weather-box" id="weather">
+
+                <h2>Weather 🌤️</h2>
+
+                <div class="weather-content">
+
+                    <div class="weather-icon">🌤️</div>
+
+                    <div class="weather-info">
+
+                        <h1 id="temperature">--°C</h1>
+
+                        <h3 id="city">Loading...</h3>
+
+                        <p id="condition">--</p>
+
+                        <p>💧 Humidity:<span id="humidity">--</span>%</p>
+
+                        <p>🌬️ Wind:<span id="wind">--°C</span>km/h</p>
+
+                    </div>
+
+                </div>
+
+                <input type="text" id="cityInput" placeholder="Enter city">
+
+                <button id="searchWeather">Search</button>
+
+            </div>
+
+        </section>
+
+        <!-- Quote Section -->
+
+        <section class="quote-section">
+
+            <div class="quote-box">
+
+                <div class="quote-content">
+
+                    <p id="quoteText">Loading quote...</p>
+
+                    <h4 id="quoteAuthor">--</h4>
+
+                </div>
+
+                <button id="newQuote">New Quote</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/task.js"></script>
+    <script src="/js/planner.js"></script>
+    <script src="/js/notes.js"></script>
+    <script src="/js/pomodoro.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/habits.js"></script>
+    <script src="/js/goals.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/weather.js"></script>
+    <script src="/js/quotes.js"></script>
+
+
+</body>
+
+</html>
