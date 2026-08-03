@@ -30,7 +30,7 @@ registerForm.addEventListener("submit", function(e){
 
     alert("Account Created Successfully 🎉");
 
-    window.location.href="../html/index.html";
+    window.location.href="/index.html";
 
 
 });

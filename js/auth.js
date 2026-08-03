@@ -51,7 +51,7 @@ loginForm.addEventListener("submit", function(e){
 
         // Redirect to dashboard
 
-        window.location.href = "dashboard.html";
+        window.location.href = "/html/dashboard.html";
 
 
     }

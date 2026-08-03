@@ -14,7 +14,7 @@ let isLoggedIn = localStorage.getItem("isLoggedIn");
 
 if(isLoggedIn !== "true"){
 
-    window.location.href = "index.html";
+    window.location.href = "/index.html";
 
 }
 
@@ -42,7 +42,7 @@ logout.addEventListener("click",()=>{
     localStorage.removeItem("isLoggedIn");
 
 
-    window.location.href="index.html";
+    window.location.href="/index.html";
 
 
 });
